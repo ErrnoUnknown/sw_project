@@ -5,6 +5,7 @@ import numpy as np
 st.title('This is a title')
 st.title('_Streamlit_ is :blue[cool] :sunglasses:')
 
-df = pd.DataFrame(np.random.randn(10, 20), columns=("col %d" % i for i in range(20)))
+def click_event():
+    print('1')
 
-st.dataframe(df.style.highlight_max(axis=0))
+st.button('Example Button', on_click=click_event)
